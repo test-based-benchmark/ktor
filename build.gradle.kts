@@ -101,12 +101,13 @@ apply(from = "gradle/compatibility.gradle")
 plugins {
     id("org.jetbrains.dokka") version "1.9.20" apply false
     id("org.jetbrains.kotlinx.binary-compatibility-validator") version "0.16.3"
-    id("com.osacky.doctor") version "0.10.0"
+    id("org.jetbrains.kotlinx.kover") version "0.8.3"
+    //id("com.osacky.doctor") version "0.10.0"
 }
 
-doctor {
-    enableTestCaching = false
-}
+//doctor {
+//    enableTestCaching = false
+//}
 
 subprojects {
     group = "io.ktor"
@@ -120,6 +121,7 @@ subprojects {
 
     apply(plugin = "kotlin-multiplatform")
     apply(plugin = "atomicfu-conventions")
+    apply(plugin = "org.jetbrains.kotlinx.kover")
 
     configureTargets()
 
