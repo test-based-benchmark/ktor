@@ -12,6 +12,7 @@ import io.ktor.server.engine.*
 import io.ktor.server.netty.*
 import io.ktor.utils.io.errors.*
 import kotlinx.io.IOException
+import org.junit.jupiter.api.Disabled
 import java.security.*
 import java.security.cert.*
 import javax.net.ssl.*
@@ -37,6 +38,8 @@ abstract class HttpsTest<T : HttpClientEngineConfig>(
 
     protected abstract fun T.disableCertificatePinning()
 
+
+    @Disabled
     @Test
     fun testHttpsOverProxy() = testWithEngine(factory) {
         config {

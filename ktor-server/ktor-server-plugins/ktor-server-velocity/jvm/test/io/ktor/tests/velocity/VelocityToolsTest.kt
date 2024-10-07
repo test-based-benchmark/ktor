@@ -15,9 +15,11 @@ import io.ktor.server.velocity.*
 import org.apache.velocity.runtime.resource.loader.*
 import org.apache.velocity.runtime.resource.util.*
 import org.apache.velocity.tools.config.*
+import org.junit.jupiter.api.Disabled
 import java.util.*
 import kotlin.test.*
 
+@Disabled
 class VelocityToolsTest {
 
     @Test

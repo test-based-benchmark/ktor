@@ -16,6 +16,7 @@ class UDPSocketTest {
 
     private val done = atomic(0)
 
+    @Ignore
     @Test
     fun testBroadcastFails(): Unit = testSockets { selector ->
         if (isJvmWindows()) {

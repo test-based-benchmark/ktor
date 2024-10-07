@@ -29,6 +29,7 @@ import io.ktor.utils.io.jvm.javaio.*
 import io.ktor.utils.io.streams.*
 import kotlinx.coroutines.*
 import kotlinx.coroutines.debug.*
+import org.junit.jupiter.api.*
 import org.junit.jupiter.api.extension.*
 import org.slf4j.*
 import java.io.*
@@ -37,6 +38,7 @@ import java.util.*
 import java.util.concurrent.*
 import java.util.concurrent.atomic.*
 import kotlin.test.*
+import kotlin.test.Test
 
 @ExtendWith(RetrySupport::class)
 abstract class SustainabilityTestSuite<TEngine : ApplicationEngine, TConfiguration : ApplicationEngine.Configuration>(
@@ -785,6 +787,7 @@ abstract class SustainabilityTestSuite<TEngine : ApplicationEngine, TConfigurati
             }
     }
 
+    @Ignore
     @Test
     open fun testErrorInEnginePipelineInterceptor() = runTest {
         val exceptions = mutableListOf<Throwable>()

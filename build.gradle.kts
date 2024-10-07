@@ -208,3 +208,12 @@ fun KotlinMultiplatformExtension.configureSourceSets() {
             }
         }
 }
+kover {
+    merge {
+        subprojects { subproject ->
+            subproject.path !in uncoveredProjects
+        }
+    }
+}
+
+val uncoveredProjects get() = setOf(":ktor-bom")

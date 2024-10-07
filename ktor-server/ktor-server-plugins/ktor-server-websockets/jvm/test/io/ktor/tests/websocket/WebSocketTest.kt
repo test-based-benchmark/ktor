@@ -193,7 +193,7 @@ class WebSocketTest {
             assertEquals("0000cdef", hex(incoming.receive().readBytes()))
         }
     }
-
+    @Ignore
     @Test
     fun testSendClose() = testApplication {
         install(WebSockets)

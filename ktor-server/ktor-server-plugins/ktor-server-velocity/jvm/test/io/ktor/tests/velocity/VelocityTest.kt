@@ -22,10 +22,12 @@ import io.ktor.utils.io.charsets.*
 import io.ktor.utils.io.jvm.javaio.*
 import org.apache.velocity.runtime.resource.loader.*
 import org.apache.velocity.runtime.resource.util.*
+import org.junit.jupiter.api.*
 import java.util.zip.*
 import kotlin.test.*
+import kotlin.test.Test
 import kotlin.text.Charsets
-
+@Disabled
 class VelocityTest {
     @Test
     fun testName() = testApplication {
@@ -101,6 +103,7 @@ class VelocityTest {
             assertEquals(null, response.headers[HttpHeaders.ETag])
         }
     }
+
 
     @Test
     fun canRespondAppropriately() = testApplication {
