@@ -94,7 +94,7 @@ fun Test.configureJavaLauncher(jdk: Int) {
     if (jdk < 11) {
         val javaToolchains = project.extensions.getByType<JavaToolchainService>()
         val customLauncher = javaToolchains.launcherFor {
-            languageVersion = JavaLanguageVersion.of("11")
+            languageVersion = JavaLanguageVersion.of("21")
         }
         javaLauncher = customLauncher
     }
