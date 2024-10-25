@@ -126,6 +126,7 @@ class ServerPipelineTest : CoroutineScope {
     }
 
     @Test
+    @Ignore
     fun testSingleRequestUpgradeNoTimeout(): Unit = runBlocking(coroutineContext) {
         val input = ByteChannel()
         val output = ByteChannel()

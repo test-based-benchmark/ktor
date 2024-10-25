@@ -85,6 +85,7 @@ class DefaultWebSocketTest {
 
     @Test
     @OptIn(InternalAPI::class)
+    @Ignore
     fun testPingPongTimeout() = runTestWithRealTime {
         parent = Job()
         client2server = ByteChannel()

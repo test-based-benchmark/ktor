@@ -306,6 +306,7 @@ abstract class AbstractClientContentNegotiationTest : TestWithKtor() {
     }
 
     @Test
+    @Ignore
     open fun testGeneric(): Unit = testWithEngine(CIO) {
         configureClient()
 

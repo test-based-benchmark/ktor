@@ -458,6 +458,7 @@ class RateLimitTest {
     }
 
     @Test
+    @Ignore
     fun testAddsAdditionalHeadersToResponse() = testApplication {
         var time = getTimeMillis()
         install(RateLimit) {

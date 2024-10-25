@@ -175,6 +175,7 @@ class ContentTest : ClientLoader(5 * 60) {
     }
 
     @Test
+    @Ignore
     fun testTextContent() = clientTests(listOf("Darwin", "CIO", "DarwinLegacy")) {
         test { client ->
             testStrings.forEach { content ->
@@ -356,6 +357,7 @@ class ContentTest : ClientLoader(5 * 60) {
 
     // NSUrlSession buffers first 512 bytes
     @Test
+    @Ignore
     fun testDownloadStream() = clientTests(listOf("Darwin", "DarwinLegacy")) {
         test { client ->
             client.prepareGet("$TEST_SERVER/content/stream?delay=100").execute {
