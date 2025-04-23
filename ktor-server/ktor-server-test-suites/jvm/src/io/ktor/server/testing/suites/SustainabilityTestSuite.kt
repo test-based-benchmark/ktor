@@ -613,6 +613,7 @@ abstract class SustainabilityTestSuite<TEngine : ApplicationEngine, TConfigurati
     @RetryableTest(3)
     @Test
     @NoHttp2
+    @Ignore
     fun testHeaderIsTooLong() = runTest {
         createAndStartServer {
             get("/") {

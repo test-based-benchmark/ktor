@@ -47,8 +47,4 @@ class JettyAsyncServerPluginsTest :
         enableHttp2 = false
         enableSsl = false
     }
-
-    @Ignore
-    override fun testHeaderIsTooLong() {
-    }
 }

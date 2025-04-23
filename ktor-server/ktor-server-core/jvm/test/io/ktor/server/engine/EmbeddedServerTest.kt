@@ -7,7 +7,6 @@ package io.ktor.server.engine
 import org.junit.jupiter.api.*
 import org.junit.jupiter.api.Assertions.*
 import java.net.*
-import kotlin.test.*
 
 class EmbeddedServerTest {
 
@@ -36,7 +35,7 @@ class EmbeddedServerTest {
     }
 
     @Test
-    @Ignore
+    @Disabled
     fun `checkUrlMatches returns false when URL path is null`() {
         val url = URI.create("jar:file:///some/path/to/file.jar!/").toURL()
         val pattern = "path/to"
