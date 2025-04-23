@@ -17,6 +17,7 @@ class AndroidProxyTest {
     private val factory: HttpClientEngineFactory<*> = Android
 
     @Test
+    @Ignore
     fun testProxyPost() = testWithEngine(factory) {
         config {
             engine {

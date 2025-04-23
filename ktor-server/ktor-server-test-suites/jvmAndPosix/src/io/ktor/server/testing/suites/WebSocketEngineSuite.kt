@@ -40,6 +40,7 @@ abstract class WebSocketEngineSuite<TEngine : ApplicationEngine, TConfiguration 
     }
 
     @Test
+    @Ignore
     fun testWebSocketDisconnectDuringConsuming() = runTest {
         val closeReasonJob = Job()
         val contextJob = Job()

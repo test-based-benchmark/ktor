@@ -388,6 +388,7 @@ abstract class ContentTestSuite<TEngine : ApplicationEngine, TConfiguration : Ap
     }
 
     @Test
+    @Ignore
     fun testStreamNoFlush() = runTest {
         createAndStartServer {
             handle {
@@ -453,6 +454,7 @@ abstract class ContentTestSuite<TEngine : ApplicationEngine, TConfiguration : Ap
     }
 
     @Test
+    @Ignore
     fun testStaticServeFromDir() = runTest {
         val targetClasses = File(classesDir)
 

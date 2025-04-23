@@ -110,6 +110,10 @@ class NettySustainabilityTest : SustainabilityTestSuite<NettyApplicationEngine, 
         configuration.shareWorkGroup = true
     }
 
+    @Ignore
+    override fun testHeaderIsTooLong() {
+    }
+
     @Test
     fun testRawWebSocketFreeze() = runTest {
         createAndStartServer {

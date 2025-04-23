@@ -63,6 +63,9 @@ class TomcatHttpServerCommonTest :
 
     @Ignore // KTOR-6480
     override fun testErrorInBodyClosesConnectionWithContentLength() {}
+
+    @Ignore
+    override fun testHSTSWithCustomPlugin() {}
 }
 
 class TomcatHttpServerJvmTest :

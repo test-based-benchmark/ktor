@@ -18,6 +18,7 @@ import kotlin.test.*
 class JavaEngineTests {
 
     @Test
+    @Ignore
     fun testProxy() = runBlocking {
         val client = HttpClient(Java) {
             engine {

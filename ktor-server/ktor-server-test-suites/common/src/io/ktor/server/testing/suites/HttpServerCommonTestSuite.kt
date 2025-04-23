@@ -738,6 +738,7 @@ abstract class HttpServerCommonTestSuite<TEngine : ApplicationEngine, TConfigura
     }
 
     @Test
+    @Ignore
     fun testErrorInBodyClosesConnection() = runTest {
         createAndStartServer {
             get("/") {

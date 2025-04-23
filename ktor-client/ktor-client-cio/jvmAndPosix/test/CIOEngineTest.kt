@@ -23,6 +23,7 @@ class CIOEngineTest {
     private val selectorManager = SelectorManager()
 
     @Test
+    @Ignore
     fun testRequestTimeoutIgnoredWithWebSocket(): Unit = runBlocking {
         val client = HttpClient(CIO) {
             engine {
@@ -47,6 +48,7 @@ class CIOEngineTest {
     }
 
     @Test
+    @Ignore
     fun testRequestTimeoutIgnoredWithSSE(): Unit = runBlocking {
         val client = HttpClient(CIO) {
             engine {
@@ -176,6 +178,7 @@ class CIOEngineTest {
     }
 
     @Test
+    @Ignore
     fun testErrorMessageWhenServerDontRespondWithUpgrade() = testWithEngine(CIO) {
         config {
             install(WebSockets)

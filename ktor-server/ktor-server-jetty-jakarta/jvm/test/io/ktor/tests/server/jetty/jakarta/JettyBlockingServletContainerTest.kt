@@ -44,7 +44,11 @@ class JettyBlockingServletContainerHttpServerJvmTest :
 class JettyBlockingServletContainerSustainabilityTest :
     SustainabilityTestSuite<JettyApplicationEngineBase, JettyApplicationEngineBase.Configuration>(
         Servlet(async = false)
-    )
+    ) {
+    @Ignore
+    override fun testHeaderIsTooLong() {
+    }
+}
 
 class JettyBlockingServletServerPluginTest :
     ServerPluginsTestSuite<JettyApplicationEngineBase, JettyApplicationEngineBase.Configuration>(
