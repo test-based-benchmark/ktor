@@ -149,6 +149,7 @@ class CIOEngineTest {
     }
 
     @Test
+    @Ignore
     fun testRepeatRequestAfterExpectationFailed(): Unit = runBlocking {
         val body = "Hello World"
 

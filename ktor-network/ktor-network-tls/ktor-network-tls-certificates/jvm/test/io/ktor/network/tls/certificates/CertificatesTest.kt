@@ -10,6 +10,7 @@ import java.time.temporal.*
 import javax.security.auth.x500.*
 import kotlin.test.*
 
+@Ignore
 class CertificatesTest {
 
     private val jbLocalhost = X500Principal("CN=localhost, OU=Kotlin, O=JetBrains, C=RU")

@@ -685,7 +685,7 @@ abstract class HttpServerCommonTestSuite<TEngine : ApplicationEngine, TConfigura
     }
 
     @Test
-    fun testHSTSWithCustomPlugin() = runTest {
+    open fun testHSTSWithCustomPlugin() = runTest {
         createAndStartServer {
             val plugin = createApplicationPlugin("plugin") {
                 on(CallSetup) { call ->
