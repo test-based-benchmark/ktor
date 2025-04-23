@@ -21,4 +21,9 @@ class TomcatWebSocketTest :
     @Ignore
     override fun testFragmentedFlagsFromTheFirstFrame() {
     }
+
+    @Ignore
+    @Test
+    override fun testReceiveMessages() {
+    }
 }

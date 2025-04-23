@@ -332,7 +332,7 @@ abstract class WebSocketEngineSuite<TEngine : ApplicationEngine, TConfiguration 
     }
 
     @Test
-    fun testReceiveMessages() = runTest {
+    open fun testReceiveMessages() = runTest {
         val count = 125
         val template = (1..count).joinToString("") { (it and 0x0f).toString(16) }
         val bytes = template.toByteArray()
