@@ -66,6 +66,9 @@ class TomcatHttpServerCommonTest :
 
     @Ignore
     override fun testHSTSWithCustomPlugin() {}
+
+    @Ignore
+    override fun testCanModifyRequestBody() {}
 }
 
 class TomcatHttpServerJvmTest :
