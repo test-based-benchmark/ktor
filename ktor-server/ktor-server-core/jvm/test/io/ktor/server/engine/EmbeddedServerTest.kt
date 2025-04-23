@@ -7,6 +7,7 @@ package io.ktor.server.engine
 import org.junit.jupiter.api.*
 import org.junit.jupiter.api.Assertions.*
 import java.net.*
+import kotlin.test.*
 
 class EmbeddedServerTest {
 
