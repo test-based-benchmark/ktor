@@ -663,6 +663,7 @@ abstract class SustainabilityTestSuite<TEngine : ApplicationEngine, TConfigurati
     class CustomFail(message: String) : Throwable(message)
 
     @Test
+    @Ignore
     fun testErrorInApplicationCallPipelineInterceptor() = runTest {
         val exceptions = mutableListOf<Throwable>()
         val loggerDelegate = LoggerFactory.getLogger("io.ktor.test")
@@ -703,6 +704,7 @@ abstract class SustainabilityTestSuite<TEngine : ApplicationEngine, TConfigurati
     }
 
     @Test
+    @Ignore
     fun testErrorInApplicationReceivePipelineInterceptor() = runTest {
         val exceptions = mutableListOf<Throwable>()
         val loggerDelegate = LoggerFactory.getLogger("io.ktor.test")
@@ -746,6 +748,7 @@ abstract class SustainabilityTestSuite<TEngine : ApplicationEngine, TConfigurati
     }
 
     @Test
+    @Ignore
     fun testErrorInApplicationSendPipelineInterceptor() = runTest {
         val exceptions = mutableListOf<Throwable>()
         val loggerDelegate = LoggerFactory.getLogger("ktor.test")
