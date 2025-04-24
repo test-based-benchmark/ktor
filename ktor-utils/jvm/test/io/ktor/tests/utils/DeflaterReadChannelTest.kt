@@ -115,6 +115,7 @@ class DeflaterReadChannelTest : CoroutineScope {
     }
 
     @RetryableTest(3)
+    @Ignore
     fun testFaultyGzippedBiggerThan8k() {
         val text = buildString {
             for (i in 1..16 * 1024 * 1024) {

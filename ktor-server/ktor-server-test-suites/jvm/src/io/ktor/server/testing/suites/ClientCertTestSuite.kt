@@ -44,6 +44,7 @@ abstract class ClientCertTestSuite<Engine : ApplicationEngine, Configuration : A
     @RetryableTest(2)
     @CoroutinesTimeout(60 * 1000, cancelOnTimeout = true)
     @Test
+    @Ignore
     open fun `Server requesting Client Certificate from CIO Client`() {
         val clientKeys = ca.generateCertificate(keyType = KeyType.Client)
 

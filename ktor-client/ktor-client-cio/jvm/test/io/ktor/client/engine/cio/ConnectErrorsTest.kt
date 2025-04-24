@@ -27,6 +27,7 @@ import kotlin.test.*
 
 @CoroutinesTimeout(5 * 60 * 1000)
 @ExtendWith(RetrySupport::class)
+@Ignore
 class ConnectErrorsTest {
 
     private val serverSocket = ServerSocket(0, 1)

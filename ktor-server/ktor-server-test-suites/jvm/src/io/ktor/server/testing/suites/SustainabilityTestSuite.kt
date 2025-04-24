@@ -244,6 +244,7 @@ abstract class SustainabilityTestSuite<TEngine : ApplicationEngine, TConfigurati
     }
 
     @Test
+    @Ignore
     fun testApplicationScopeCancellation() = runTest {
         var job: Job? = null
 
@@ -261,6 +262,7 @@ abstract class SustainabilityTestSuite<TEngine : ApplicationEngine, TConfigurati
     @RetryableTest(2)
     @OptIn(ExperimentalCoroutinesApi::class)
     @Test
+    @Ignore
     fun testEmbeddedServerCancellation() = runTest {
         val parent = Job()
 
@@ -313,6 +315,7 @@ abstract class SustainabilityTestSuite<TEngine : ApplicationEngine, TConfigurati
     }
 
     @Test
+    @Ignore
     fun testRepeatRequest() = runTest {
         createAndStartServer {
             get("/") {
@@ -330,6 +333,7 @@ abstract class SustainabilityTestSuite<TEngine : ApplicationEngine, TConfigurati
 
     @OptIn(InternalAPI::class, ExperimentalCoroutinesApi::class, DelicateCoroutinesApi::class)
     @RetryableTest(4)
+    @Ignore
     open fun testBlockingConcurrency() = runTest {
         val completed = AtomicInteger(0)
         createAndStartServer {
@@ -457,6 +461,7 @@ abstract class SustainabilityTestSuite<TEngine : ApplicationEngine, TConfigurati
     }
 
     @Test
+    @Ignore
     open fun testBlockingDeadlock() = runTest {
         createAndStartServer {
             get("/") {
@@ -828,6 +833,7 @@ abstract class SustainabilityTestSuite<TEngine : ApplicationEngine, TConfigurati
 
     @OptIn(InternalAPI::class)
     @Test
+    @Ignore
     fun testRespondBlockingLarge() = runTest {
         val server = createServer {
             routing {

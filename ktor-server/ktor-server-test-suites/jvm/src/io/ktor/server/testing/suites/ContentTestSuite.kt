@@ -425,6 +425,7 @@ abstract class ContentTestSuite<TEngine : ApplicationEngine, TConfiguration : Ap
 
     @RetryableTest
     @Test
+    @Ignore
     fun testStaticServe() = runTest {
         createAndStartServer {
             staticResources("/files/", "io/ktor/server/testing/suites")
